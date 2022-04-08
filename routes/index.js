@@ -23,6 +23,17 @@ let pool = sql.createPool({
       //resleases connecction back into pool
       connection.release();
       if (error) throw error;
+
+      //edit the to remove password
+      results.forEach(result => {
+          delete result.password;
+          delete result.last_name;
+
+          if (!result.avatar) {
+            result.avatar = "temp_avatar.jpg";
+          }
+      })
+
       //log the data to terminal
       console.log(results);
       res.json(results);
