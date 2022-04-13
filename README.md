@@ -1,5 +1,5 @@
 # netflixclone_backend
-Backend for Vue js App
+Backend Repository for Vue js App
 
 ## Project setup
 ```
